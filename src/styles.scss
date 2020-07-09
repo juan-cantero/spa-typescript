@@ -1,0 +1,7 @@
+@import '../src/scss/home';
+$primary-color: red;
+$bg: black;
+h1 {
+  color: $primary-color;
+  background-color: $bg;
+}
