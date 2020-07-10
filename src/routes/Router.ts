@@ -1,8 +1,9 @@
-import Home from './Home';
-import About from './About';
+import Home from '../components/Home';
+import About from '../components/About';
 import Mounter from '../lib/Mounter';
+import Posts from '../components/Posts';
 
-const router = async (route: string) => {
+const router = (route: string) => {
   const root = document.querySelector('#root')!;
   root.innerHTML = ' ';
   switch (route) {
@@ -12,6 +13,10 @@ const router = async (route: string) => {
     case '#/about': {
       return Mounter.render(new About('about'), root);
     }
+    case '#/posts': {
+      return Mounter.render(new Posts('post'), root);
+    }
+
     default: {
       return 'nothing';
     }

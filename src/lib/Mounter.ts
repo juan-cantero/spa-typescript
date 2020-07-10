@@ -1,8 +1,9 @@
-import Component from '../components/Component';
+import Component from './Component';
 
 class Mounter {
-  static render(child: Component, parent: Element) {
-    parent.insertAdjacentElement('afterbegin', child.component());
+  static async render(child: Component, parent: Element) {
+    child.init();
+    parent.appendChild(child.mount());
   }
 }
 

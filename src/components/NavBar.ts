@@ -1,13 +1,20 @@
-import Component from './Component';
+import Component from '../lib/Component';
 
 class NavBar extends Component {
+  mount(): HTMLElement {
+    return this.root;
+  }
   render() {
-    return `
+    this.root.insertAdjacentHTML(
+      'afterbegin',
+      `
   <nav class="navbar ">
     <a href="#/">Home</a>
     <a href="#/about">About</a>
+    <a href="#/posts">Posts</a>
     
-  </nav>`;
+  </nav>`
+    );
   }
 }
 

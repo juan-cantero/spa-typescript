@@ -1,11 +1,11 @@
 import './styles.scss';
-import router from './components/Router';
+import router from './routes/Router';
 import Mounter from './lib/Mounter';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 
 let nav = document.getElementById('navbar')!;
-Mounter.render(new NavBar('navbar'), nav);
+Mounter.render(new NavBar('nav'), nav);
 
 const loadMainPage = (): void => {
   const root = document.querySelector('#root')!;

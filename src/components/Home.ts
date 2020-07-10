@@ -1,8 +1,11 @@
 import Component from './Component';
 
 class Home extends Component {
+  mount(): HTMLElement {
+    return this.root;
+  }
   render() {
-    return `<h1>Home</h1>`;
+    this.root.insertAdjacentHTML('afterbegin', `<h1>Home</h1>`);
   }
 }
 

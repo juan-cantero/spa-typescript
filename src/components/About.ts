@@ -1,11 +1,17 @@
-import Component from './Component';
+import Component from '../lib/Component';
 
 class About extends Component {
+  mount(): HTMLElement {
+    return this.root;
+  }
   render() {
-    return `
+    this.root.insertAdjacentHTML(
+      'afterbegin',
+      `
       <h1>About</h1>
       
-              `;
+              `
+    );
   }
 }
 
